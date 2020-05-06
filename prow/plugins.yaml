@@ -32,7 +32,6 @@ lgtm:
   - aspenmesh/private-istio
   - aspenmesh/private-cni
   - aspenmesh/private-proxy
-  - aspenmesh/private-istio-releases/pipeline
   review_acts_as_lgtm: true
   trusted_team_for_sticky_lgtm: "Istio Hackers"
 
