@@ -26,14 +26,7 @@ presubmits:
       containers:
       - image: gcr.io/istio-testing/prowbazel:0.5.16
         command:
-        - ./prow/proxy-presubmit.sh
-        env:
-          - name: BAZEL_BUILD_RBE_INSTANCE
-            value: projects/prow-cicd/instances/default_instance
-          - name: ENVOY_PREFIX
-            value: envoy-wasm
-          - name: ENVOY_REPOSITORY
-            value: https://github.com/envoyproxy/envoy-wasm        
+        - ./prow/proxy-presubmit.sh     
         resources:
           requests:
             memory: "8Gi"
@@ -65,14 +58,7 @@ presubmits:
       containers:
       - image: gcr.io/istio-testing/prowbazel:0.5.16
         command:
-        - ./prow/proxy-presubmit-asan.sh
-        env:
-          - name: BAZEL_BUILD_RBE_INSTANCE
-            value: projects/prow-cicd/instances/default_instance
-          - name: ENVOY_PREFIX
-            value: envoy-wasm
-          - name: ENVOY_REPOSITORY
-            value: https://github.com/envoyproxy/envoy-wasm        
+        - ./prow/proxy-presubmit-asan.sh        
         resources:
           requests:
             memory: "8Gi"
@@ -105,13 +91,6 @@ presubmits:
       - image: gcr.io/istio-testing/prowbazel:0.5.16
         command:
         - ./prow/proxy-presubmit-tsan.sh
-        env:
-          - name: BAZEL_BUILD_RBE_INSTANCE
-            value: projects/prow-cicd/instances/default_instance
-          - name: ENVOY_PREFIX
-            value: envoy-wasm
-          - name: ENVOY_REPOSITORY
-            value: https://github.com/envoyproxy/envoy-wasm        
         resources:
           requests:
             memory: "8Gi"
