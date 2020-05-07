@@ -35,7 +35,7 @@ presubmits:
             memory: "60Gi"
             cpu: "16000m"
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
 
   - name: proxy-presubmit-asan
     annotations:
@@ -67,7 +67,7 @@ presubmits:
             memory: "60Gi"
             cpu: "16000m"
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
 
   - name: proxy-presubmit-tsan
     annotations:
@@ -99,7 +99,7 @@ presubmits:
             memory: "60Gi"
             cpu: "16000m"
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
 
   - name: proxy-presubmit-release
     annotations:
@@ -138,7 +138,7 @@ presubmits:
             memory: "60Gi"
             cpu: "16000m"
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
 
 postsubmits:
 
@@ -189,4 +189,4 @@ postsubmits:
             memory: "60Gi"
             cpu: "16000m"
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
